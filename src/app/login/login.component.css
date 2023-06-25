@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
+@font-face {
+    font-family: Metropolis-bolditalic;
+    src: url(assets/fonts/metropolis.bold-italic.otf);
+  }
 /* Login Outer */
 .login_banner { background: linear-gradient(90deg, #5D54A4, #7C78B8); position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; }
 .login_content { width: 500px; height: 560px; margin: 0px auto; background: var(--white); padding: 60px; border-radius: 26px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
