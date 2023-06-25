@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+/* Login Outer */
+.login_banner { background: linear-gradient(90deg, #5D54A4, #7C78B8); position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; }
+.login_content { width: 500px; height: 560px; margin: 0px auto; background: var(--white); padding: 60px; border-radius: 26px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+/* Login Form */
+.login_field { padding: 20px 0px 15px 0; position: relative; }
+.login h1{padding-bottom: 10px; text-align: center; color: var(--btn-color);}
+.login_field .fa-solid  { position: absolute; top: 38px;left: 20px; color: var(--btn-color); }
+.login_input { border: 1px solid #D1D1D4; border-radius: 26px; background: none; padding: 15px 25px 15px 43px; font-weight: 700; width: 100%; transition: .2s; }
+.login_input:active,.login_input:focus, .login_input:hover { outline: none; border:1px solid #6A679E; }
+.login_submit { background: var(--btn-color); font-size: 14px; margin-top: 30px; padding: 15px 20px; border-radius: 26px; border: 1px solid #D4D3E8; text-transform: uppercase; font-weight: 700; width: 100%; color: var(--white); box-shadow: 0px 2px 2px #5C5696; cursor: pointer; transition: .2s; }
+.login_submit:hover,.login_input:hover { transform: scale(1.1); }
+.login_input:hover{padding-left: 55px;}
+.login_submit:active,.login_submit:focus{ border-color: #6A679E; outline: none; }
+/* Error Message */
+.err-msg{color: #c42b39;padding-top: 10px;font-size: 14px;}
+.error-message{ margin-top:20px;padding:10px 20px; border-radius: 26px;font-size: 14px;display: flex; justify-content: space-between; align-items: center;}
+.close{font-size: 20px;}
+.close svg{fill: #721c24;}
+.close:focus{border: none;outline: none;}
+
