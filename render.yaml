@@ -1,5 +1,5 @@
 services:
-  - name: your-app-name
+  - name: explore-movie-app
     type: static
     buildCommand: ng build --prod
-    publishDir: dist/your-app-name
+    publishDir: dist/explore-movie-app
