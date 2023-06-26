@@ -1,0 +1,5 @@
+services:
+  - name: your-app-name
+    type: static
+    buildCommand: ng build --prod
+    publishDir: dist/your-app-name
