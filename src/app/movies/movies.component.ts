@@ -22,18 +22,12 @@ export class MoviesComponent implements OnInit {
   movies: Movie[] = [];
   selectedMovie: any = null;
   openMovieFlow: any = false;
-
   totalPages: any = 0;
   currentPage: any = 1;
   pages: any = []
-
   isDarkTheme = false;
 
-  // backgroundColor: string = 'white';
-  // containerHeight: string = '100vh';
-  // isDarkTheme: boolean = false;
-
-
+ 
   constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
@@ -42,39 +36,25 @@ export class MoviesComponent implements OnInit {
       this.router.navigate(['/'])
     }
     this.fetchMovies(1);
-    // this.loadTheme();
-    // this.applyTheme();
+    this.loadTheme();
 
   }
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
+    this.applyTheme();
+    this.saveTheme();
   }
-  // toggleTheme() {
-  //   this.isDarkTheme = !this.isDarkTheme;
-  //   this.applyTheme();
-  //   this.saveTheme();
-  // }
+ 
+  applyTheme() {
+    const body = document.querySelector('body');
+    body?.classList.toggle('dark-theme', this.isDarkTheme);
+  }
 
-  // applyTheme() {
-  //   if (this.isDarkTheme) {
-  //     this.backgroundColor = 'black';
-  //     this.containerHeight = '100vh';
-  //   } else {
-  //     this.backgroundColor = 'white';
-  //     document.body.style.height = 'auto';
-
-  //   }
-  // }
-
-  // loadTheme() {
-  //   const savedTheme = localStorage.getItem('appTheme');
-  //   if (savedTheme === 'dark') {
-  //     this.isDarkTheme = true;
-  //   } else {
-  //     this.isDarkTheme = false;
-  //   }
-  // }
-
+  loadTheme() {
+    const savedTheme = localStorage.getItem('appTheme');
+    this.isDarkTheme = savedTheme === 'dark';
+    this.applyTheme();
+  }
 
   saveTheme() {
     const theme = this.isDarkTheme ? 'dark' : 'light';
